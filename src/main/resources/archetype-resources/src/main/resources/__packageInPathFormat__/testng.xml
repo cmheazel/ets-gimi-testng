@@ -1,0 +1,23 @@
+#set( $symbol_dollar = '$' )
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="${ets-code}-${symbol_dollar}{version}" verbose="0" configfailurepolicy="continue">
+  <parameter name="iut"  value=""/>
+  <parameter name="ics"  value=""/>
+
+  <listeners>
+    <listener class-name="${package}.TestRunListener" />
+    <listener class-name="${package}.SuiteFixtureListener" />
+    <listener class-name="${package}.TestFailureListener" />
+  </listeners>
+
+  <test name="Conformance Level 1">
+    <packages>
+      <package name="${package}.level1" />
+    </packages>
+    <classes>
+      <class name="${package}.SuitePreconditions" />
+    </classes>
+  </test>
+  <!-- Add test sets for other conformance classes/levels -->
+</suite>

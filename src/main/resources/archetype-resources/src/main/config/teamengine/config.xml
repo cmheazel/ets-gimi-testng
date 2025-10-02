@@ -1,0 +1,33 @@
+#set( $symbol_dollar = '$' )
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Unpack the *-ctl-scripts.zip archive in the TE_BASE/scripts directory -->
+<!-- Add this entry to TE_BASE/config.xml (//organization/standard) -->
+<organization>
+  <name>OGC</name>
+  <standard>
+    <name>${ets-title}</name>
+    <version>
+      <name>${spec-version}</name>
+      <suite>
+        <namespace-uri>http://www.opengis.net/cite/${ets-code}</namespace-uri>
+        <prefix>tns</prefix>
+        <local-name>ets-${ets-code}-${symbol_dollar}{version}</local-name>
+        <title>ets-${ets-code} Conformance Test Suite</title>
+        <description>Describe scope of testing.</description>
+        <!-- Add baisc conformance test suites
+        <BasicConformanceClasses>
+          <conformanceClass>Core</conformanceClass>
+        </BasicConformanceClasses>
+        -->
+      </suite>
+      <revision>
+        <name>${project.version}</name>
+        <status>Beta</status>
+        <sources>
+          <source>${ets-code}/${symbol_dollar}{spec-version}/ctl</source>
+        </sources>
+        <webdir>${ets-code}/${symbol_dollar}{spec-version}/site</webdir>
+      </revision>
+    </version>
+  </standard>
+</organization>

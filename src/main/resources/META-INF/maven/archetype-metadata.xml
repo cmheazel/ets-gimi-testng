@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor name="cite-archetype-testng" 
+  xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 
+                      http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd">
+  <requiredProperties>
+    <requiredProperty key="ets-code" />
+    <requiredProperty key="ets-title">
+      <defaultValue>Test suite: ets-${ets-code}</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="ets-title-short">
+      <defaultValue>${ets-code}</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="groupId">
+      <defaultValue>org.opengis.cite</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="artifactId">
+      <defaultValue>ets-${ets-code}</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="package">
+      <defaultValue>org.opengis.cite.${ets-code}</defaultValue>
+    </requiredProperty>
+    <requiredProperty key="version">
+      <defaultValue>0.1-SNAPSHOT</defaultValue>
+    </requiredProperty>
+  </requiredProperties>
+  <fileSets>
+    <fileSet filtered="true" packaged="true" encoding="UTF-8">
+      <directory>src/main/java</directory>
+      <includes>
+        <include>**/*.java</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>src/main/scripts</directory>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>src/main/javadoc</directory>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>src/main/resources</directory>
+      <includes>
+        <include>**/*.xml</include>
+        <include>**/*.html</include>
+        <include>**/*.TestSuiteController</include>
+        <include>**/org.testng.ITestNGListener</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="false" encoding="UTF-8">
+      <directory>src/main/resources</directory>
+      <includes>
+        <include>**/*.xsl</include>
+        <include>**/*.properties</include>
+        <include>**/*.xsd</include>
+        <include>**/*.sch</include>
+        <include>**/*.rnc</include>
+        <include>**/*.png</include>
+        <include>req/**</include>
+      </includes>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>src/main/config</directory>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>src/assembly</directory>
+    </fileSet>
+    <fileSet filtered="true" packaged="true" encoding="UTF-8">
+      <directory>src/test/java</directory>
+      <includes>
+        <include>**/*.java</include>
+      </includes>
+    </fileSet>
+    <fileSet encoding="UTF-8">
+      <directory>src/test/resources</directory>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>src/site</directory>
+      <excludes>
+        <exclude>resources/**</exclude>
+      </excludes>
+    </fileSet>
+    <fileSet filtered="false" encoding="UTF-8">
+      <directory>src/site/resources</directory>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>src/docker</directory>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory>jenkinsfiles</directory>
+    </fileSet>
+    <fileSet filtered="true" encoding="UTF-8">
+      <directory></directory>
+      <includes>
+        <include>README.md</include>
+        <include>LICENSE.txt</include>
+        <include>.gitignore</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+</archetype-descriptor>
