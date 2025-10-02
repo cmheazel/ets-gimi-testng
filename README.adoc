@@ -1,0 +1,1 @@
+= Skeleton site for use with Jekyll ISO TC 211 theme
