@@ -22,7 +22,7 @@
   </bannerLeft>
 
   <body>
-    <menu name="TestNG Archetype">
+    <menu name="GIMI Conformance Test">
       <item href="index.html" name="Overview" />
       <item href="changelog.html" name="Release Notes" />
     </menu>

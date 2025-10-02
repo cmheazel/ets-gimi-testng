@@ -1,4 +1,4 @@
-# Test Suite Archetype - TestNG Framework
+# GIMI Exectuable Test Suite 
 
 ## Purpose
 This Maven archetype serves as a template for creating a new executable test 
